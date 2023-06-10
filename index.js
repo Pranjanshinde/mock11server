@@ -3,8 +3,10 @@ const { connection } = require("./db");
 const { Userrouter } = require("./Routes/User.route");
 const { Emimodel } = require("./models/Emi.module");
 const { Emiroute } = require("./Routes/Emi.route");
+var cors = require('cors');
 const { Auth } = require("./Middleware/Auth");
 const app=express();
+app.use(cors());
 
 app.use(express.json());
 
